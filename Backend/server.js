@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import {connectDB} from "./config/db.js"
 import todoRoutes from "./routes/todo.route.js"
 import cors from 'cors';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
