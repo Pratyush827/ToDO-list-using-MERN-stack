@@ -1,10 +1,11 @@
 {
   "name": "todo-list",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start":"node Backend/server.js",
-    "dev":"node --watch Backend/server.js"
+    "dev": "nodemon Backend/server.js",
+    "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
+    "start": "node Backend/server.js"
   },
   "type": "module",
   "keywords": [],
@@ -12,8 +13,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "mongoose": "^8.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
